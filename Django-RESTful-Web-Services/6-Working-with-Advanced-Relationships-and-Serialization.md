@@ -55,6 +55,10 @@ The drone category (DroneCategory model) just requires a name.
 
 ## Defining hyperlinks with serializers.HyperlinkedModelSerializer
 
+The `DroneSerializer` class is a subclass of the `HyperlinkedModelSerializer` class. The `DroneSerializer` class declares a `drone_category` attribute that holds an instance of `serializers.SlugRelatedField` with its `queryset` argument set to `DroneCategory.objects.all()` and its `slug_field` argument set to 'name'.
+
+A `SlugRelatedField` is a read-write field that represents the target of the relationship by a unique slug attribute, that is, the description. In the Drone model, we created the `drone_category` field as a `models.ForeignKey` instance.
+
 ## Working with class-based views
 
 ## Taking advantage of generic classes and generic views
