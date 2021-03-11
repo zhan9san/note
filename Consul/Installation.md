@@ -18,6 +18,14 @@ unzip consul_1.9.4_linux_amd64.zip
 ./consul agent -bind 172.28.24.103 -client 172.28.24.103 -data-dir=./data -node=consul-client-2 -join 172.28.24.98
 ```
 
+## Commands
+
+```bash script
+./consul members
+
+./consul operator raft list-peers
+```
+
 ## Outage
 
 If one server is down, there is no need to add `join x.x.x.x` explictly at the end of command.
