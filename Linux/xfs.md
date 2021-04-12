@@ -24,3 +24,11 @@
     ```
 
 Reference: `https://www.thegeekdiary.com/how-to-create-an-xfs-filesystem/`
+
+## Extend
+
+```bash script
+# growpart /dev/xvdf 1
+WARNING: MBR/dos partitioned disk is larger than 2TB. Additional space will go unused.
+CHANGED: partition=1 start=2048 old: size=3774871519 end=3774873567 new: size=4294965248 end=4294967296
+```

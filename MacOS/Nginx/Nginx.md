@@ -15,3 +15,9 @@ Or, if you don't want/need a background service you can just run:
 ==> Summary
 🍺  /usr/local/Cellar/nginx/1.19.0: 25 files, 2.1MB
 ```
+
+Test Nginx configuration
+
+```bash script
+nginx -t -c /usr/local/etc/nginx/nginx.conf 
+```

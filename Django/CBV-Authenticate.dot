@@ -1,0 +1,27 @@
+digraph G {
+
+    URL
+    -> "DogView.as_view"
+    -> "APIView.as_view"
+    -> "View.as_view"
+    -> "self.dispatch(request, *args, **kwargs)"
+    -> "APIView.dispatch"
+    -> "self.initialize_request"
+    -> "self.initial(request, *args, **kwargs)"
+    -> "Get the appropriate handler method"
+    -> "retun response"
+
+    "self.initial(request, *args, **kwargs)"
+    -> "self.perform_authentication"
+    -> "self.check_permissions"
+    -> "self.check_throttles"
+
+    "self.perform_authentication" -> "request.user"
+    
+    "request.user" -> "self._authenticate()"
+    "self._authenticate()" -> "request.user"
+
+    "request.user" -> "self.perform_authentication"
+
+    "APIView.as_view" -> "csrf_exempt(view)"
+}
