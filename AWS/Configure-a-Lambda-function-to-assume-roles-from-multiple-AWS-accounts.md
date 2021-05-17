@@ -35,6 +35,7 @@ account A to assume the role in account B and C:
             "Resource": [
                 "arn:aws:iam::222222222222:role/role-on-source-account-2",
                 "arn:aws:iam::333333333333:role/role-on-source-account-3"
+            ]
         }
     }
     ```
