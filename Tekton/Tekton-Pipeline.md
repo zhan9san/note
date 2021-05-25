@@ -243,3 +243,10 @@ It may take a few moments before your Pipeline completes. When it executes, it s
 [goodbye : goodbye] + set -e
 [goodbye : goodbye] + echo Goodbye World!
 ```
+
+kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-0.32.0/deploy/static/provider/kind/deploy.yaml
+
+kubectl wait -n ingress-nginx \
+  --for=condition=ready pod \
+  --selector=app.kubernetes.io/component=controller \
+  --timeout=90s

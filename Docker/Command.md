@@ -12,3 +12,21 @@ load on remote
 ```sehll script
 docker image load -i /tmp/xxx.xxx
 ```
+
+Delete all local images
+
+```bash
+docker rmi $(docker images -a -q)
+```
+
+Delete all containers
+
+```bash
+docker rm -f $(docker ps -a -q)
+```
+
+Delete all volumes
+
+```bash
+docker volume rm $(docker volume ls -q)
+```
