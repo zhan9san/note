@@ -1,6 +1,4 @@
-# Kubernetes plugin
-
-[How to get token and cert](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
+# How to get Service Account token and cert
 
 ## Token
 
@@ -13,3 +11,7 @@ kubectl get secret $(kubectl get sa jenkins -o yaml | yq e '.secrets[0].name' -)
 ```bash
 kubectl get secret $(kubectl get sa jenkins -o yaml | yq e '.secrets[0].name' -) -o yaml | yq e '.data."ca.crt"' - | base64 -d
 ```
+
+## Reference
+
+[How to get Service Account token and cert](https://kubernetes.io/docs/reference/access-authn-authz/authentication/)
