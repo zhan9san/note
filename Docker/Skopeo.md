@@ -49,7 +49,7 @@ nginx-copy-oci/
 2 directories, 10 files
 ```
 
-### FAQ
+## FAQ
 
 Error message on macOS
 
