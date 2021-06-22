@@ -5,6 +5,7 @@
 1. [buildah](https://github.com/containers/buildah)
 2. [skopeo](https://github.com/containers/skopeo)
 3. [podman](https://github.com/containers/podman)
+4. [kaniko](https://github.com/GoogleContainerTools/kaniko)
 
 ### Another tools
 
